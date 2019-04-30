@@ -6,3 +6,10 @@ def to_hex(r, g, b)
 	end
 	ret
 end
+
+def to_ints(hex)
+	r = hex[1, 2]
+	g = hex[3, 2]
+	b = hex[5, 2]
+	[r, g, b].map { |x| x.hex }
+end
